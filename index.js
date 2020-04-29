@@ -11,51 +11,68 @@ var lossesText = document.getElementById('losses');
 var tiesText = document.getElementById('ties');
 
 // Whenever a key is pressed, alert "pressed a button".
-document.getElementById("rock").onclick = function(event) {
-    var userPick = document.getElementById("rock").value;
+document.getElementById("rock").onclick = function(event, userPick) {
+    userPick = document.getElementById("rock").value;
     console.log("this is the rock button")
     console.log("this is the rock button value", userPick);
     computerPick();
-   
+    runGame(userPick);
 };
-document.getElementById("paper").onclick = function(event) {
-    var userPick = document.getElementById("paper").value;
+
+document.getElementById("paper").onclick = function(event, userPick) {
+    userPick = document.getElementById("paper").value;
     console.log("this is the paper button")
     console.log("this is the paper button value", userPick);
     computerPick();
+    runGame(userPick);
 };
-document.getElementById("scissors").onclick = function(event) {
-    var userPick = document.getElementById("scissors").value;
+
+document.getElementById("scissors").onclick = function(event, userPick) {
+    userPick = document.getElementById("scissors").value;
     console.log("this is the scissors button")
     console.log("this is the scissors button value", userPick);
     computerPick();
+    runGame(userPick);
 };
+
     // logic for computer pick/letter 
-function computerPick() {
-    var compPick = rpsChoices[Math.floor(Math.random() * rpsChoices.length)]
+function computerPick(compPick) {
+    compPick = rpsChoices[Math.floor(Math.random() * rpsChoices.length)]
     console.log("This is my random letter", compPick)
 }
 
+function runGame(userPick, compPick) {
+    // if ((userPick === "r") || (userPick === "p") || (userPick === "s")){
+        if (userPick === "r" && compPick === "s" || userPick === "p" && compPick === "r" || userPick === "s" && compPick === "p") {
+            wins++;
+            console.log("user pick - if statement", userPick);
+            console.log("comp pick - if statement", compPick);
+            }
+            else if(userPick === compPick) {
+            ties++;
+            console.log("user pick - else if statement", userPick);
+            console.log("comp pick - else if statement", compPick);
+            }
+            else {
+            losses++;
+            console.log("user pick - else statement", userPick);
+            console.log("comp pick - else statement", compPick);
+        }
+        userPickText.innerHTML = "You chose: " + userPick;
+        compPickText.innerHTML = "Computer chose: " + compPick;
+        winsText.innerHTML = "Wins: " + wins;
+        lossesText.innerHTML = "Losses: " + losses;
+        tiesText.innerHTML = "Ties: " + ties;
+        
+        reset();
+      }
+    //    else {
+    //   alert ("You must choose R, P, or S to play the game")
+    //  }
+// }
 
-    // logic for game - conditionals 
-// if ((userPick === "r") || (userPick === "p") || (userPick === "s")){
-//     if (userPick === "r" && compPick === "s" || userPick === "p" && compPick === "r" || userPick === "s" && compPick === "p") {
-//         wins++;
-//         }else if(userPick === compPick) {
-//         ties++;
-//         }else {
-//         losses++;
-//     }
-//     userPickText.innerHTML = "You chose: " + userPick;
-//     compPickText.innerHTML = "Computer chose: " + compPick;
-//     winsText.innerHTML = "Wins: " + wins;
-//     lossesText.innerHTML = "Losses: " + losses;
-//     tiesText.innerHTML = "Ties: " + ties;
-    
-//     reset();
-//   } else {
-//   alert ("You must choose R, P, or S to play the game")
-//  }
+
+
 
 
     function reset() {
