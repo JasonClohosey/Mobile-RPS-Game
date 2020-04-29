@@ -15,7 +15,7 @@ document.getElementById("rock").onclick = function(event, userPick) {
     userPick = document.getElementById("rock").value;
     console.log("this is the rock button")
     console.log("this is the rock button value", userPick);
-    computerPick();
+    // computerPick();
     runGame(userPick);
 };
 
@@ -23,7 +23,7 @@ document.getElementById("paper").onclick = function(event, userPick) {
     userPick = document.getElementById("paper").value;
     console.log("this is the paper button")
     console.log("this is the paper button value", userPick);
-    computerPick();
+    // computerPick();
     runGame(userPick);
 };
 
@@ -31,17 +31,20 @@ document.getElementById("scissors").onclick = function(event, userPick) {
     userPick = document.getElementById("scissors").value;
     console.log("this is the scissors button")
     console.log("this is the scissors button value", userPick);
-    computerPick();
+    // computerPick();
     runGame(userPick);
 };
 
     // logic for computer pick/letter 
-function computerPick(compPick) {
-    compPick = rpsChoices[Math.floor(Math.random() * rpsChoices.length)]
-    console.log("This is my random letter", compPick)
-}
+// function computerPick(compPick) {
+//     compPick = rpsChoices[Math.floor(Math.random() * rpsChoices.length)]
+//     console.log("This is the computer choice", compPick)
+// }
 
-function runGame(userPick, compPick) {
+function runGame(userPick) {
+
+    var compPick = rpsChoices[Math.floor(Math.random() * rpsChoices.length)]
+    console.log("This is the computer choice", compPick)
     // if ((userPick === "r") || (userPick === "p") || (userPick === "s")){
         if (userPick === "r" && compPick === "s" || userPick === "p" && compPick === "r" || userPick === "s" && compPick === "p") {
             wins++;
