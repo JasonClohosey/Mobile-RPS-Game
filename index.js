@@ -12,19 +12,22 @@ var tiesText = document.getElementById('ties');
 
 // Whenever a key is pressed, alert "pressed a button".
 document.getElementById("rock").onclick = function(event) {
-    // var userPick = button.val("rock");
+    var userPick = document.getElementById("rock").value;
     console.log("this is the rock button")
+    console.log("this is the rock button value", userPick);
     computerPick();
    
 };
 document.getElementById("paper").onclick = function(event) {
-
+    var userPick = document.getElementById("paper").value;
     console.log("this is the paper button")
+    console.log("this is the paper button value", userPick);
     computerPick();
 };
 document.getElementById("scissors").onclick = function(event) {
-
+    var userPick = document.getElementById("scissors").value;
     console.log("this is the scissors button")
+    console.log("this is the scissors button value", userPick);
     computerPick();
 };
     // logic for computer pick/letter 
