@@ -1,4 +1,4 @@
-var rpsChoices = ["r", "p", "s"];
+var rpsChoices = ["rock", "paper", "scissors"];
 // console.log(rpsChoices);
 var wins = 0;
 var losses = 0;
@@ -46,7 +46,7 @@ function runGame(userPick) {
     var compPick = rpsChoices[Math.floor(Math.random() * rpsChoices.length)]
     console.log("This is the computer choice", compPick)
     // if ((userPick === "r") || (userPick === "p") || (userPick === "s")){
-        if (userPick === "r" && compPick === "s" || userPick === "p" && compPick === "r" || userPick === "s" && compPick === "p") {
+        if (userPick === "rock" && compPick === "scissors" || userPick === "paper" && compPick === "rock" || userPick === "scissors" && compPick === "paper") {
             wins++;
             console.log("user pick - if statement", userPick);
             console.log("comp pick - if statement", compPick);
@@ -61,8 +61,8 @@ function runGame(userPick) {
             console.log("user pick - else statement", userPick);
             console.log("comp pick - else statement", compPick);
         }
-        userPickText.innerHTML = "You chose: " + userPick;
-        compPickText.innerHTML = "Computer chose: " + compPick;
+        userPickText.innerHTML = "User: " + userPick;
+        compPickText.innerHTML = "Computer: " + compPick;
         winsText.innerHTML = "Wins: " + wins;
         lossesText.innerHTML = "Losses: " + losses;
         tiesText.innerHTML = "Ties: " + ties;
