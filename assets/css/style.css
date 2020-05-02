@@ -7,26 +7,29 @@ body {
     color: white;
 }
 header {
-    background-color: rgb(112, 112, 112);
+    background-color: black;
     color: darkorange;
     font-size: 2rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
     height: 5rem;
     justify-content: center;
+    border: solid 2px darkorange;
+    width: 100%;
+    float: left;
 }
 h1 {
-    padding-top: 1.25rem;
     font-size: 2rem;
 
 }
+
 h2 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.4rem;
-    color: darkorange;
+    font-size: 1.25rem;
+    color: rgb(33, 201, 252);
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    width: 100%;
+    float: left;
 }
 h3 {
     /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
@@ -37,13 +40,18 @@ h3 {
     padding-top: .85rem;
 }
 #user-pick {
-    background-color: darkolivegreen;
+    background-color: black;
+    color: darkorange;
+    border: solid 2px darkorange;
     float: left;
     width: 50%;
     
 }
 #comp-pick {
-    background-color: darkred;
+    background-color: darkorange;
+    background: black;
+    color: white;
+    border: solid 2px white;
     float: left;
     width: 50%;
 }
@@ -51,41 +59,44 @@ h3 {
     width: 100%;
     text-align: center;
     height: 3rem;
-    background-color: rgb(112, 112, 112);
+    background-color: black;
     color: darkorange;
-    border: white solid 3px;
+    border-bottom: white solid 1.25px;
     justify-content: center;
     float: left;
-
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     padding-top: .5rem;
     margin: 0rem;
+    color:rgb(33, 201, 252);
 }
 #losses {
     width: 100%;
     text-align: center;
     height: 3rem;
-    background-color: rgb(112, 112, 112);
+    background-color: black;
     color: darkorange;
-    border: white solid 3px;
+    border-top: white solid 1.25px;
+    border-bottom: white solid 1.25px;
     justify-content: center;
     float: left;
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     padding-top: .5rem;
     margin: 0rem;
+    color: rgb(33, 201, 252);;
 }
 #ties {
     width: 100%;
     text-align: center;
     height: 3rem;
-    background-color: rgb(112, 112, 112);
+    background-color: black;
     color: darkorange;
-    border: white solid 3px;
+    border-top: white solid 1.25px;
     justify-content: center;
     float: left;
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     padding-top: .5rem;
     margin: 0rem;
+    color: rgb(33, 201, 252);;
 }
 button {
     background-color: white;
@@ -100,4 +111,9 @@ button:focus {
 img {
     width: 100%;
     height: 5rem;
+}
+@media only screen and (max-width: 350px) {
+    h1 {
+        font-size: 1.75rem;
+    }
 }
