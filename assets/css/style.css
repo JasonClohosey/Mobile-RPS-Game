@@ -112,8 +112,3 @@ img {
     width: 100%;
     height: 5rem;
 }
-@media only screen and (max-width: 350px) {
-    h1 {
-        font-size: 1.75rem;
-    }
-}

@@ -1,0 +1,30 @@
+@media only screen and (max-width: 350px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+    #user-pick {
+        width: 25%;
+        margin-left: 25%;
+    }
+    #comp-pick {
+        width: 25%;
+    }
+    button {
+        width: 22%;
+        margin-left: 8.5%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    button {
+        width: 16%;
+        margin-left: 13%;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    button {
+        width: 11.11%;
+        margin-left: 16.66%;
+    }
+}
